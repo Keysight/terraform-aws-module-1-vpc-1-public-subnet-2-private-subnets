@@ -26,6 +26,7 @@ resource "aws_subnet" "Private1Subnet" {
 	availability_zone = local.Private1SubnetAvailabilityZone
 	cidr_block = local.Private1SubnetCidrBlock
 	vpc_id = aws_vpc.Vpc.id
+	map_public_ip_on_launch = false
 	tags = {
 		Name = local.Private1SubnetName
 		Owner = local.UserEmailTag
@@ -37,6 +38,7 @@ resource "aws_subnet" "Private2Subnet" {
 	availability_zone = local.Private2SubnetAvailabilityZone
 	cidr_block = local.Private2SubnetCidrBlock
 	vpc_id = aws_vpc.Vpc.id
+	map_public_ip_on_launch = false
 	tags = {
 		Name = local.Private2SubnetName
 		Owner = local.UserEmailTag
