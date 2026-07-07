@@ -16,7 +16,7 @@ output "Private1Subnet" {
 	value = {
 		"availability_zone" : aws_subnet.Private1Subnet.availability_zone
 		"id" : aws_subnet.Private1Subnet.id
-		"tags" : aws_subnet.Private1Subnet.tags
+		"name" : aws_subnet.Private1Subnet.tags["Name"]
 	}
 }
 
@@ -25,7 +25,7 @@ output "Private2Subnet" {
 	value = {
 		"availability_zone" : aws_subnet.Private2Subnet.availability_zone
 		"id" : aws_subnet.Private2Subnet.id
-		"tags" : aws_subnet.Private2Subnet.tags
+		"name" : aws_subnet.Private2Subnet.tags["Name"]
 	}
 }
 
@@ -42,7 +42,7 @@ output "PublicSubnet" {
 	value = {
 		"availability_zone" : aws_subnet.PublicSubnet.availability_zone
 		"id" : aws_subnet.PublicSubnet.id
-		"tags" : aws_subnet.PublicSubnet.tags
+		"name" : aws_subnet.PublicSubnet.tags["Name"]
 	}
 }
 
